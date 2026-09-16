@@ -60,9 +60,13 @@ def clean():
                     os.remove(path)
                     deleted += 1
                     folder_deleted += 1
-
+                    
                 elif os.path.isdir(path):
+                    count = 0
+                
                     for root, _, files in os.walk(path):
+                        count += len(files)
+                
                         for file in files:
                             try:
                                 freed += os.path.getsize(
@@ -70,10 +74,10 @@ def clean():
                                 )
                             except OSError:
                                 pass
-
+                
                     shutil.rmtree(path)
-                    deleted += 1
-                    folder_deleted += 1
+                    deleted += count
+                    folder_deleted += count
 
             except Exception as e:
                 skipped += 1
