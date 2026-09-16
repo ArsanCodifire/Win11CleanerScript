@@ -103,13 +103,15 @@ This only changes the appearance of the shortcut. The application works normally
 ## 📁 Project Structure
 
 ```text
-Cleaner Script/
+Win11CleanerScript/
 │
-├── app.pyw             # Main application
-├── cleaner.py          # Cleanup engine
-├── Start Cleanup.vbs   # Launcher / Windows Startup script
-├── Icons/
-│   └── cleaner.ico
+├── Cleaner Script/
+│   ├── app.pyw             # Main application
+│   ├── cleaner.py          # Cleanup engine
+│   ├── Start Cleanup.vbs   # Launcher / Windows Startup script
+│   └── Icons/
+│       └── cleaner.ico
+│
 ├── LICENSE
 └── README.md
 ```
